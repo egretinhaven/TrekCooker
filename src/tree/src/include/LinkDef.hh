@@ -26,4 +26,5 @@
 #pragma link C++ class std::vector<MCDetectorHit>+;
 #pragma link C++ class MCDetectorData;
 
+#pragma link C++ class CRTRawCsI+;
 #endif

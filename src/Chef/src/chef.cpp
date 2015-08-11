@@ -133,7 +133,7 @@ void Chef::prepareTrees(std::string input, std::string output)
   boost::split(inputtreetypes,recipe.srctree,boost::is_any_of(":"));
   boost::split(inputfilenames,input,boost::is_any_of(":"));
   int roots=0;
-  for (int i=0;i<inputfilenames.size();i++)
+  for (unsigned int i=0;i<inputfilenames.size();i++)
     if (inputfilenames[i]=="root") roots++;
   if (inputtreetypes.size()!=inputfilenames.size()-roots)
     {

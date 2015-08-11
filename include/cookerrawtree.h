@@ -49,6 +49,7 @@ class CRTRunInfo:public CRTBase
 {
 	public:
 		UInt_t runNumber;
+
 		TTimeStamp startTime;
 		TTimeStamp stopTime;
 		UInt_t nrOfEvents;
@@ -57,6 +58,7 @@ class CRTRunInfo:public CRTBase
 		Double_t targetFlow;
 		Double_t magnetCurrent;
 		Int_t beamSpecies; // -1=Electrons , 0=Cosmics , 1=Positrons
+
 		CRTRunInfo();
 		virtual ~CRTRunInfo();
 		ClassDef(CRTRunInfo,2);
