@@ -30,8 +30,9 @@ Long_t Det_CsI::setIdCsI(map<IdCsI,UInt_t> & map){
 	  name+=0x00300000+(((iHole+1)%10)<<16);
 	  name+=fb[ifb]<<8;
 	  name+=ud[iud];
-	  IdCsI first(name,iCsI);
+	  IdCsI first(name,iCsI+1);
 	  map[first]=index;
+	  index++;
 	}
       }
     }

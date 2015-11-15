@@ -44,8 +44,20 @@ class Det_CsI:public Plugin
   Long_t process_fit();
   Long_t finalize_fit();
   Long_t setIdCsI(std::map<IdCsI,UInt_t>& mapCsI);
+  Long_t set_goodEvents(int, int);
+  std::vector<std::pair<int,int> > listGoodEvent;
+  //histograms for fit
+
+  TH2D* h2TimeVSCsI;
+  TH2D* h2ChargeVSCsI;
+  TH1D* h1MaxDiff;
+  TH2D* h2DiffVSCsI;
+  
+
   virtual Long_t cmdline(char * cmd);
 
+  
+  
   ClassDef(Det_CsI,1);
     };
 

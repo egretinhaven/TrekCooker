@@ -47,8 +47,8 @@ std::vector<callinfo*> Chef::compilelist(std::vector<class_method> &list)
   std::vector<callinfo*> erg;
   for (std::vector<class_method>::iterator iter=list.begin();iter!=list.end();iter++)
     {
-      std::cout<<"  "<<iter->classname<<"::"<<iter->method<<std::endl; 
       callinfo *mc=new callinfo(plugins[iter->classname],plugins[iter->classname]->IsA(),iter->method);
+
       erg.push_back(mc);
     }
   return erg;
@@ -105,7 +105,7 @@ void Chef::prepareTreesExplora(TTree *in_,std::string output)
   in=in_;
   if (output!="")
     {
-      std::cout<<"Creating output file:"<<output;
+
       if (output.find("root://",0)==0)
 	outfile=TFile::Open(output.c_str(),"NEW");  // root network protocol. Does not allow recreate (maybe because of dcache backend?
       else
@@ -252,13 +252,9 @@ void Chef::loadPlugins()
       plugins[iter->first]=plug;
     }
 
-  std::cout<<std::endl<<"defineHistograms:"<<std::endl;
   cldefineHistograms=compilelist(recipe.defineHistograms);
-  std::cout<<std::endl<<"Startup:"<<std::endl;
   clstartup=compilelist(recipe.startup);
-  std::cout<<std::endl<<"Execute:"<<std::endl;
   clexecute=compilelist(recipe.commands);
-  std::cout<<std::endl<<"Finalize:"<<std::endl;
   clfinalize=compilelist(recipe.finalize); 
 }
 

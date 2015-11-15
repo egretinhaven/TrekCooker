@@ -276,7 +276,6 @@ void Plugin::getBranchObjectFrom(TTree *from,const char *name, TObject **p)
    {
      from->SetBranchAddress(name,p); 
    }
-
  debug(100,"Got Branch: %s, Status: %i at %p\n",name,from->GetBranchStatus(name),*p);
 }
 

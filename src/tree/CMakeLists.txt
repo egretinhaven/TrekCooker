@@ -5,10 +5,13 @@ IF(COMMAND cmake_policy)
 	cmake_policy(SET CMP0003 NEW)
 ENDIF(COMMAND cmake_policy)
 
+###########################################
+# POI:
 # Set project name
 PROJECT(cookerrawtree)
 
-
+#############################################
+# POI:
 # Set the library version
 SET(COOKERTREE_MAJOR_VERSION 1)
 SET(COOKERTREE_MINOR_VERSION 1)
@@ -19,6 +22,10 @@ LIST(APPEND COOKERTREE_LIBRARY_PROPERTIES VERSION "${COOKERTREE_VERSION}" SOVERS
 # find source and header files, set paths, includes...
 SET(LIBNAME "cookerrawtree")
 FILE(GLOB SRCS src/*.cpp)
+
+###################################################3
+# POI:
+# set header files included
 
 FILE(GLOB HEADERS src/include/*.h
 ${CMAKE_SOURCE_DIR}/include/cookerrawtree.h 

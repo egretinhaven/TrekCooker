@@ -27,4 +27,5 @@
 #pragma link C++ class MCDetectorData;
 
 #pragma link C++ class CRTRawCsI+;
+#pragma link C++ class CRTFitCsI+;
 #endif

@@ -26,4 +26,19 @@ class CRTRawCsI:public CRTBase
   virtual ~CRTRawCsI();
   ClassDef(CRTRawCsI,1);
 };
+class CRTFitCsI:public CRTBase
+{
+ public:
+  UInt_t runNo;
+  UInt_t eventNo;
+  UInt_t nChannel;
+  std::vector<UInt_t> indexCsI;
+  std::vector<UInt_t> nWave;
+  std::vector< std::vector<double> > timeFit;
+  std::vector< std::vector<double> > chargeFit;
+  CRTFitCsI();
+  virtual ~CRTFitCsI();
+  ClassDef(CRTFitCsI,1);
+};
+
 #endif

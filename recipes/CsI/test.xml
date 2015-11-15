@@ -2,15 +2,15 @@
 <cooker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:noNamespaceSchemaLocation='recipe.xsd'>
 
-<init>init/demo.xml</init>
+<init>/${HOME}/.cooker/shared/init/fitWave.xml</init>
 
 <source>vf48_hdw</source> <!-- the source tree name-->
-<destination>CsI_Wave</destination> <!-- the destination tree name-->
+<destination>vf48_fitwave</destination> <!-- the destination tree name-->
 
 <plugins>
   <plugin> 
-     <name>macro</name>
-     <file>libMacro</file>
+     <name>CsI</name>
+     <file>libCsI</file>
   </plugin>
 
 
@@ -18,22 +18,22 @@
 
 
 <defineHistograms>
- <macro>defineHistograms</macro>
+ <CsI>histos_fit</CsI>
 </defineHistograms>
 
 <!-- These functions will be called at the beginning --> 
 <startup>
- <macro>startup</macro>
+ <CsI>startup_fit</CsI>
 </startup>
 
 <!-- These functions will be executed for every event, in order of appearance -->
 <execute>
- <macro>process</macro>
+ <CsI>process_fit</CsI>
 </execute>
 
 <!-- These functions will be called at the end of the file --> 
 <finalize>
- <macro>finalize</macro>
+ <CsI>finalize_fit</CsI>
 </finalize>
 
 </cooker>
